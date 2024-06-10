@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.Sunshine.common.ui.OverScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+
+        <TextView
+            style="@style/textSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="设备性能" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="2">
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_core_control"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_cpu"
+                app:text="@string/menu_core_control" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_swap"
+                style="@style/nav_item_wrap_right"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_swap"
+                app:text="@string/menu_swap" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_processes"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_processes"
+                app:text="@string/menu_processes" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_fps_chart"
+                style="@style/nav_item_wrap_right"
+                android:tag="root"
+                app:drawable="@drawable/fw_float_fps"
+                app:text="@string/menu_fps_chart" />
+        </GridLayout>
+
+
+        <TextView
+            style="@style/textSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="充电耗电" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="2">
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_charge"
+                style="@style/nav_item_wrap"
+                app:drawable="@drawable/battery"
+                app:text="@string/menu_charge" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_power_utilization"
+                style="@style/nav_item_wrap_right"
+                app:drawable="@drawable/ic_bat_stats"
+                app:text="@string/menu_power_utilization" />
+        </GridLayout>
+
+
+        <TextView
+            style="@style/textSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="进阶功能" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="2">
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_applictions"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_modules"
+                app:text="@string/menu_applictions" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_img"
+                style="@style/nav_item_wrap_right"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_img"
+                app:text="@string/menu_img" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_additional"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_vboot"
+                app:text="@string/menu_sundry" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_additional_all"
+                style="@style/nav_item_wrap_right"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_shell"
+                app:text="@string/menu_additional" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_app_magisk"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_app_magisk" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_miui_thermal"
+                style="@style/nav_item_wrap_right"
+                app:drawable="@drawable/ic_menu_hot"
+                app:text="@string/menu_miui_thermal" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_modules"
+                style="@style/nav_item_wrap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_magisk"
+                app:text="@string/menu_modules" />
+
+         <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_freeze"
+                style="@style/nav_item_wrap_right"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_freeze"
+                app:text="@string/menu_freeze" />
+
+        </GridLayout>
+
+        <TextView
+            style="@style/textSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Sunshine功能" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="2">
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_1"
+                style="@style/nav_item_wrap"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_11" />
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_2"
+                style="@style/nav_item_wrap_right"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_21" />
+                
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_3"
+                style="@style/nav_item_wrap"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_31" />
+
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_4"
+                style="@style/nav_item_wrap_right"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_41" />
+                
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_5"
+                style="@style/nav_item_wrap"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_51" />
+
+
+            <com.Sunshine.ui.NavItem
+                android:id="@+id/nav_6"
+                style="@style/nav_item_wrap_right"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_61" />
+        </GridLayout>
+
+    </LinearLayout>
+</com.Sunshine.common.ui.OverScrollView>

@@ -1,0 +1,1 @@
+am startservice -n com.Sunshine.ToolBox/.services.CompileService -a com.Sunshine.ToolBox.SpeedCompile
