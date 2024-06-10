@@ -37,7 +37,6 @@ import android.widget.TextView
 import java.io.DataOutputStream
 import java.io.BufferedReader
 import com.Sunshine.ToolBox.activities.ThemeSwitch
-import com.Sunshine.copyAssetsToFiles
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -56,7 +55,6 @@ class ActivityStartSplash : Activity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_start_splash)
-        updateThemeStyle(themeMode)
         checkPermissions()
     }
 
