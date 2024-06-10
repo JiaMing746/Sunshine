@@ -43,7 +43,8 @@ class ActivityStartSplash : Activity() {
     }
 
     private lateinit var globalSPF: SharedPreferences
-
+private lateinit var themeMode: ThemeMode
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         globalSPF = getSharedPreferences(SpfConfig.GLOBAL_SPF, Context.MODE_PRIVATE)
 
@@ -52,7 +53,7 @@ class ActivityStartSplash : Activity() {
 
         setContentView(R.layout.activity_start_splash)
         updateThemeStyle(themeMode)
-
+themeMode = ThemeModeState.switchTheme(this)
         checkPermissions()
     }
 
