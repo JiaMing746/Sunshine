@@ -56,7 +56,6 @@ class ActivityStartSplash : Activity() {
         
 themeMode = ThemeModeState.switchTheme(this)
         checkPermissions()
-        copyAssetsToFiles(this)
     }
 
     /**
@@ -230,6 +229,7 @@ themeMode = ThemeModeState.switchTheme(this)
     private fun startToFinish() {
         start_state_text.text = getString(R.string.pop_started)
 
+        copyAssetsToFiles(this)
         val config = KrScriptConfig().init(this)
         if (config.beforeStartSh.isNotEmpty()) {
             BeforeStartThread(this, config, UpdateLogViewHandler(start_state_text, Runnable {
