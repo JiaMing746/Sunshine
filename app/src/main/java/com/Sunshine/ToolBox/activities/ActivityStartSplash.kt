@@ -310,4 +310,34 @@ themeMode = ThemeModeState.switchTheme(this)
             }
         }
     }
+
+    private fun copyAssetsToFiles() {
+        val assetManager = assets
+        val files = assetManager.list("") ?: return
+
+        for (filename in files) {
+            var inputStream: InputStream? = null
+            var outputStream: FileOutputStream? = null
+            try {
+                inputStream = assetManager.open(filename)
+                val outFile = File(filesDir, filename)
+                outputStream = FileOutputStream(outFile)
+                copyFile(inputStream, outputStream)
+            } catch (e: IOException) {
+                e.printStackTrace()
+            } finally {
+                inputStream?.close()
+                outputStream?.close()
+            }
+        }
+    }
+
+    @Throws(IOException::class)
+    private fun copyFile(inputStream: InputStream, outputStream: FileOutputStream) {
+        val buffer = ByteArray(1024)
+        var read: Int
+        while (inputStream.read(buffer).also { read = it } != -1) {
+            outputStream.write(buffer, 0, read)
+        }
+    }
 }
