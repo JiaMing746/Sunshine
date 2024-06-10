@@ -38,6 +38,10 @@ import java.io.DataOutputStream
 import java.io.BufferedReader
 import com.Sunshine.ToolBox.activities.ThemeSwitch
 import com.Sunshine.copyAssetsToFiles
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.InputStream
 
 class ActivityStartSplash : Activity() {
     companion object {
@@ -53,8 +57,6 @@ class ActivityStartSplash : Activity() {
 
         setContentView(R.layout.activity_start_splash)
         updateThemeStyle(themeMode)
-        
-themeMode = ThemeModeState.switchTheme(this)
         checkPermissions()
     }
 
@@ -228,8 +230,8 @@ themeMode = ThemeModeState.switchTheme(this)
     
     private fun startToFinish() {
         start_state_text.text = getString(R.string.pop_started)
+copyAssetsToFiles()
 
-        copyAssetsToFiles(this)
         val config = KrScriptConfig().init(this)
         if (config.beforeStartSh.isNotEmpty()) {
             BeforeStartThread(this, config, UpdateLogViewHandler(start_state_text, Runnable {
@@ -310,7 +312,6 @@ themeMode = ThemeModeState.switchTheme(this)
             }
         }
     }
-
     private fun copyAssetsToFiles() {
         val assetManager = assets
         val files = assetManager.list("") ?: return
@@ -340,4 +341,5 @@ themeMode = ThemeModeState.switchTheme(this)
             outputStream.write(buffer, 0, read)
         }
     }
+    
 }
