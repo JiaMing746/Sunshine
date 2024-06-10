@@ -37,6 +37,7 @@ import android.widget.TextView
 import java.io.DataOutputStream
 import java.io.BufferedReader
 import com.Sunshine.ToolBox.activities.ThemeSwitch
+import com.Sunshine.copyAssetsToFiles
 
 class ActivityStartSplash : Activity() {
     companion object {
@@ -56,6 +57,7 @@ private lateinit var themeMode: ThemeMode
         updateThemeStyle(themeMode)
 themeMode = ThemeModeState.switchTheme(this)
         checkPermissions()
+        copyAssetsToFiles(this)
     }
 
     /**
