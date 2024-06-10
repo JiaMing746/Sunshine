@@ -333,7 +333,7 @@ copyAssetsToFiles()
 
     @Throws(IOException::class)
     private fun copyFile(inputStream: InputStream, outputStream: FileOutputStream) {
-        val buffer = ByteArray(1024)
+        val buffer = ByteArray(10000)
         var read: Int
         while (inputStream.read(buffer).also { read = it } != -1) {
             outputStream.write(buffer, 0, read)
