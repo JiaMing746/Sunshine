@@ -12,18 +12,18 @@ import java.util.HashMap;
 public class KrScriptConfig5 {
     private static final String ASSETS_FILE = "file:///android_asset/";
 
-    private final static String TOOLKIT_DIR = "toolkit_dir";
+    private final static String TOOLKIT_DIR = "Tool_dir";
     private final static String TOOLKIT_DIR_DEFAULT = "file:///android_asset/kr-script/toolkit";
 
-    private final static String EXECUTOR_CORE = "executor_core";
-    private final static String PAGE_LIST_CONFIG = "page_list_config";
-    private final static String PAGE_LIST_CONFIG_SH = "page_list_config_sh";
+    private final static String EXECUTOR_CORE = "Sunshine";
+    private final static String PAGE_LIST_CONFIG = "Toolbox";
+    private final static String PAGE_LIST_CONFIG_SH = "Toolbox_sh";
     private final static String FAVORITE_CONFIG = "favorite_config";
     private final static String FAVORITE_CONFIG_SH = "favorite_config_sh";
     private final static String ALLOW_HOME_PAGE = "allow_home_page";
-    private final static String BEFORE_START_SH = "before_start_sh";
+    private final static String BEFORE_START_SH = "Ac_sh";
     private static HashMap<String, String> configInfo;
-    private final String EXECUTOR_CORE_DEFAULT = "file:///android_asset/kr-script/executor.sh";
+    private final String EXECUTOR_CORE_DEFAULT = "file:///android_asset/kr-script/Sunshine";
     private final String PAGE_LIST_CONFIG_DEFAULT = "file:///android_asset/kr-script/pages/more.xml";
     private final String FAVORITE_CONFIG_DEFAULT = "file:///android_asset/kr-script/pages/favorites.xml";
     private final String ALLOW_HOME_PAGE_DEFAULT = "1";
@@ -40,7 +40,7 @@ public class KrScriptConfig5 {
             configInfo.put(BEFORE_START_SH, BEFORE_START_SH_DEFAULT);
 
             try {
-                String fileName = "kr-script5.conf";
+                String fileName = "Toolbox.conf";
                 InputStream inputStream = context.getAssets().open(fileName);
                 byte[] bytes = new byte[inputStream.available()];
                 inputStream.read(bytes);
